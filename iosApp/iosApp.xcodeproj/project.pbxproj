@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		87AA35832E7CFD8800CD99EB /* KMPNativeCoroutinesAsync in Frameworks */ = {isa = PBXBuildFile; productRef = 87AA35822E7CFD8800CD99EB /* KMPNativeCoroutinesAsync */; };
+		87AA35852E7CFD8800CD99EB /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 87AA35842E7CFD8800CD99EB /* KMPNativeCoroutinesCore */; };
+		87AA35882E7CFE0F00CD99EB /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 87AA35872E7CFE0F00CD99EB /* KMPObservableViewModelCore */; };
+		87AA358A2E7CFE0F00CD99EB /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 87AA35892E7CFE0F00CD99EB /* KMPObservableViewModelSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FA34C62FFC1AA2B63343509F /* DragonBallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,6 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87AA35852E7CFD8800CD99EB /* KMPNativeCoroutinesCore in Frameworks */,
+				87AA358A2E7CFE0F00CD99EB /* KMPObservableViewModelSwiftUI in Frameworks */,
+				87AA35832E7CFD8800CD99EB /* KMPNativeCoroutinesAsync in Frameworks */,
+				87AA35882E7CFE0F00CD99EB /* KMPObservableViewModelCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,10 @@
 			);
 			name = iosApp;
 			packageProductDependencies = (
+				87AA35822E7CFD8800CD99EB /* KMPNativeCoroutinesAsync */,
+				87AA35842E7CFD8800CD99EB /* KMPNativeCoroutinesCore */,
+				87AA35872E7CFE0F00CD99EB /* KMPObservableViewModelCore */,
+				87AA35892E7CFE0F00CD99EB /* KMPObservableViewModelSwiftUI */,
 			);
 			productName = iosApp;
 			productReference = FA34C62FFC1AA2B63343509F /* DragonBallApp.app */;
@@ -114,6 +129,10 @@
 			);
 			mainGroup = 498DD019C128726761630818;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				87AA35812E7CFD8800CD99EB /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
+				87AA35862E7CFE0F00CD99EB /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C2F07D9EAAC92DC847DA3EBD /* Products */;
 			projectDirPath = "";
@@ -290,34 +309,6 @@
 			};
 			name = Release;
 		};
-		FDBCD7DF585A9F0E6CAB6252 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iosApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		C4BBC57359855002F591070E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -346,18 +337,37 @@
 			};
 			name = Release;
 		};
+		FDBCD7DF585A9F0E6CAB6252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		987A2C03F6282E7430DD3F8F /* Build configuration list for PBXProject "iosApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66E2A47FDEDD20DAE6C0522E /* Debug */,
-				A35C28EA02D5FF41E4E7DC35 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1657BDBBD7E3CA2EB274895D /* Build configuration list for PBXNativeTarget "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -367,7 +377,58 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		987A2C03F6282E7430DD3F8F /* Build configuration list for PBXProject "iosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66E2A47FDEDD20DAE6C0522E /* Debug */,
+				A35C28EA02D5FF41E4E7DC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		87AA35812E7CFD8800CD99EB /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMP-NativeCoroutines.git";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-ALPHA-35-spm-async";
+			};
+		};
+		87AA35862E7CFE0F00CD99EB /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMP-ObservableViewModel.git";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-BETA-5";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87AA35822E7CFD8800CD99EB /* KMPNativeCoroutinesAsync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87AA35812E7CFD8800CD99EB /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesAsync;
+		};
+		87AA35842E7CFD8800CD99EB /* KMPNativeCoroutinesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87AA35812E7CFD8800CD99EB /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCore;
+		};
+		87AA35872E7CFE0F00CD99EB /* KMPObservableViewModelCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87AA35862E7CFE0F00CD99EB /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			productName = KMPObservableViewModelCore;
+		};
+		87AA35892E7CFE0F00CD99EB /* KMPObservableViewModelSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87AA35862E7CFE0F00CD99EB /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			productName = KMPObservableViewModelSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C3DDC2788B43BDE30990CB0 /* Project object */;
 }
