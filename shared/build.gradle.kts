@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.kmpNativeCoroutines) 
+    alias(libs.plugins.kmpNativeCoroutines)
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -30,8 +31,20 @@ kotlin {
             languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
         }
         commonMain.dependencies {
+            //DI
             implementation(libs.koin.core)
+            //viewmodel
             api(libs.observable.viewmodel)
+            //ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.conteat.negotiation)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            //Logs
+            implementation(libs.logs.kermit)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
