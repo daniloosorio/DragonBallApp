@@ -13,10 +13,25 @@ import KMPObservableViewModelSwiftUI
 struct HomeScreen: View {
     
     @StateViewModel
-    var homeViewModel = HomeViewModel()
+    var homeViewModel = HomeViewModel(repository: DiHelper().repository)
     
     var body: some View {
-        Text(homeViewModel.exampleValue)
+        if  !homeViewModel.charactersValue.isEmpty{
+            NavigationStack{
+                ScrollView{
+                    LazyVStack{
+                        ForEach(homeViewModel.charactersValue, id:\.self){ character in
+                            NavigationLink(destination: {}, label: {
+                                CharacterItem(item: character)
+                            })
+                            
+                        }
+                    }
+                }
+            }
+        }else {
+            ProgressView()
+        }
     }
 }
 

@@ -9,7 +9,9 @@ import io.ktor.http.ContentType
 import io.ktor.http.URLProtocol
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
+import org.example.drangonball.data.RepositoryImpl
 import org.example.drangonball.data.remote.ApiService
+import org.example.drangonball.domain.Repository
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 
@@ -38,5 +40,6 @@ val dataModule = module {
             }
         }
     }
+    factory<Repository> { RepositoryImpl(get()) }
     factoryOf(::ApiService)
 }
