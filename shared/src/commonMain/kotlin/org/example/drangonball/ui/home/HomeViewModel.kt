@@ -14,9 +14,9 @@ import org.example.drangonball.domain.model.CharacterModel
 
 class HomeViewModel(private val repository: Repository): ViewModel() {
 
-    private val _example = MutableStateFlow<String>(viewModelScope,"pepe")
+    /*private val _example = MutableStateFlow<String>(viewModelScope,"pepe")
     @NativeCoroutines
-    val example : StateFlow<String> = _example
+    val example : StateFlow<String> = _example*/
 
     private val _characters = MutableStateFlow<List<CharacterModel>>(viewModelScope,emptyList())
     @NativeCoroutines
