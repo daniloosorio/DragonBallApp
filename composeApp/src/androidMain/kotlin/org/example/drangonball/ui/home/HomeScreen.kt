@@ -43,7 +43,9 @@ import org.example.drangonball.R.drawable
 import org.example.drangonball.resource.BackgroundPrimary
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    navigateToDetail: (Int) -> Unit
+) {
     val homeViewModel: HomeViewModel = koinViewModel()
     val characters by homeViewModel.characters.collectAsState()
 
@@ -57,7 +59,7 @@ fun HomeScreen() {
         LazyColumn(contentPadding = PaddingValues(horizontal = 16.dp, vertical = 32.dp)) {
             items(characters) { character ->
                 CharacterItem(character){
-                    //navegar
+                    navigateToDetail(it.id)
                 }
             }
         }

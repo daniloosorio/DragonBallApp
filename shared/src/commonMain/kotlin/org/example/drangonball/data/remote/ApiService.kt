@@ -6,6 +6,7 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import io.ktor.http.parameters
+import org.example.drangonball.data.remote.response.CharacterResponse
 import org.example.drangonball.data.remote.response.CharacterWrapperResponse
 
 class ApiService(private val client: HttpClient) {
@@ -18,6 +19,16 @@ class ApiService(private val client: HttpClient) {
         catch (e: Exception){
             Logger.e("Error ApiService -> ${e.message}")
             return CharacterWrapperResponse(emptyList())
+        }
+    }
+
+    suspend fun getDetailCharacter(id:Int): CharacterResponse?{
+        return try {
+            client.get("/api/characters/$id").body()
+        }
+        catch (e: Exception){
+            Logger.e("Error ApiService -> ${e.message}")
+            return null
         }
     }
 }

@@ -18,12 +18,13 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import dragonballapp.composeapp.generated.resources.Res
 import dragonballapp.composeapp.generated.resources.compose_multiplatform
+import org.example.drangonball.core.navigation.NavigationNavWrapper
 import org.example.drangonball.ui.home.HomeScreen
 
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
-        HomeScreen()
+        NavigationNavWrapper()
     }
 }
